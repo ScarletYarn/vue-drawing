@@ -1,0 +1,28 @@
+.box {
+    border: #e8e8e8e8 solid 1px;
+    border-radius: .5em;
+    width: 2.5em;
+    height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.box:hover {
+     border: rgba(52, 214, 232, 0.91) solid 1px;
+ }
+
+img {
+    display: block;
+    position: relative;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.in {
+    border: #000 solid 1px;
+}
