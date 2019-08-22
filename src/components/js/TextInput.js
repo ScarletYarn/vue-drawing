@@ -55,6 +55,7 @@ class TextInput {
       this.inputBox.style.display = 'none'
       if (this.inputBox.value !== '') {
         this.addTextElement()
+        this.inputBox.value = ''
       }
     }
   }

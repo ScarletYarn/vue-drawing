@@ -42,3 +42,9 @@ will be triggered, which single parameter will be the SVG representation of the 
   }
 </script>
 ```
+
+You can customize the width and height of the canvas in this way.
+```vue
+<vue-drawing :width="1000" :height="1000"></vue-drawing>
+```
+The default width and height is 500 and 300 respectively.

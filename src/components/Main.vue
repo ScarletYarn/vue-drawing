@@ -13,11 +13,12 @@
       <textarea ref="textBox" class="text-box"></textarea>
     </div>
     <canvas
-            id="main-canvas"
-            :width="resWidth"
-            :height="resHeight"
-            :style="{width: width, height: height}"
-    ></canvas>
+            :width="width"
+            :height="height"
+            id="vue-drawing-main-canvas"
+    >
+      We are very sorry that this browser doesn't support canvas.
+    </canvas>
   </div>
 </template>
 
@@ -37,21 +38,13 @@
     name: 'vue-drawing',
     components: { TextControl, Clean, Thickness, ColorBoard, EraserControl, Stroke, ExportControl },
     props: {
-      resWidth: {
+      width: {
         type: Number,
         default: 500
       },
-      resHeight: {
+      height: {
         type: Number,
         default: 300
-      },
-      width: {
-        type: String,
-        default: '500px'
-      },
-      height: {
-        type: String,
-        default: '300px'
       }
     },
     data() {
@@ -99,7 +92,7 @@
       }
     },
     mounted () {
-      this.drawing = new VueDrawing('main-canvas')
+      this.drawing = new VueDrawing('vue-drawing-main-canvas')
     }
   }
 </script>
@@ -107,7 +100,6 @@
 <style scoped lang="scss">
   .wrapper {
     width: 500px;
-    height: 500px;
     position: relative;
     margin: 0 auto;
   }
@@ -116,7 +108,7 @@
     overflow: hidden;
   }
 
-  #main-canvas {
+  #vue-drawing-main-canvas {
     border: solid black 1px;
     cursor: crosshair;
     position: relative;
